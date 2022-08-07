@@ -1,8 +1,9 @@
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 import './css/styles.css';
 import { fetchCountries } from './fetchCountries';
 import debounce from 'lodash.debounce';
 import { createList } from './createlist';
+// import { render, createMarkup } from './render';
 
 const DEBOUNCE_DELAY = 300;
 
@@ -20,6 +21,7 @@ refs.inputEl.addEventListener(
 function onSearchCountries(event) {
   const target = event.target.value;
   const targetValue = target.toLowerCase().trim();
+
   fetchCountries(targetValue)
     .then(createList)
     .catch(error => console.log(error));
