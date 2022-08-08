@@ -1,4 +1,4 @@
-import refs from './index';
+import { refs } from './index';
 import Notiflix from 'notiflix';
 import { render, createMarkup } from './render';
 
